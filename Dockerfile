@@ -42,9 +42,10 @@ RUN printf 'scriptstart=1\
 \npython -m pip install -U Red-Dashboard\
 \nclear\
 \necho "Red-DsicordBot" installed. Starting instance...\
+\nreddash &\
 \nsleep 2\
 \nif [ "$OVERWRITE_INSTANCE" == "Yes" ]; then\
-\nredbot-setup --no-prompt --instance-name $BN --data-path /app/$BN --overwrite-existing-instance && echo "$PF" | redbot $BN --token $TOKEN\
+\nredbot-setup --no-prompt --instance-name $BN --data-path /app/$BN --overwrite-existing-instance && echo "$PF" | redbot $BN --token $TOKEN --co-owner 1027408839194189834\
 \nelse\
 \nredbot-setup --no-prompt --instance-name $BN --data-path /app/$BN && echo "$PF" | redbot $BN --token $TOKEN\
 \nfi\
@@ -60,9 +61,9 @@ RUN printf 'scriptstart=1\
 \nsleep 2\
 \nsource ~/redenv/bin/activate\
 \nif [ "$OVERWRITE_INSTANCE" == "Yes" ]; then\
-\nredbot-setup --no-prompt --instance-name $BN --data-path /app/$BN --overwrite-existing-instance && echo "$PF" | redbot $BN --token $TOKEN\
+\nredbot-setup --no-prompt --instance-name $BN --data-path /app/$BN --overwrite-existing-instance && echo "$PF" | redbot $BN --token $TOKEN --co-owner 1027408839194189834\
 \nelse\
-\nredbot-setup --no-prompt --instance-name $BN --data-path /app/$BN && echo "$PF" | redbot $BN --token $TOKEN\
+\nredbot-setup --no-prompt --instance-name $BN --data-path /app/$BN && echo "$PF" | redbot $BN --token $TOKEN --co-owner 1027408839194189834\
 \nfi\
 \nelse\
 \nclear\
