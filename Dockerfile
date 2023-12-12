@@ -39,6 +39,7 @@ RUN printf 'scriptstart=1\
 \nsource ~/redenv/bin/activate\
 \npython -m pip install -U pip psutil setuptools wheel\
 \npython -m pip install -U Red-DiscordBot\
+\npython -m pip install -U Red-Dashboard\
 \nclear\
 \necho "Red-DsicordBot" installed. Starting instance...\
 \nsleep 2\
@@ -75,7 +76,7 @@ RUN printf 'scriptstart=1\
 \ndone' >> /scripts/start_bot.sh
 #
 RUN chown $USERNAME:$USERNAME /scripts/start_bot.sh \
-    && chmod +x /scripts/start_bot.sh
+    && chmod +x /scripts/start_bot.sh && reddash
 #
 USER $USERNAME
 #
