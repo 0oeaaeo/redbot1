@@ -71,12 +71,13 @@ RUN printf 'scriptstart=1\
 \nsleep 1\
 \nsource ~/redenv/bin/activate\
 \nredbot $BN --token $TOKEN\
+\nreddash\
 \nfi\
 \nfi\
 \ndone' >> /scripts/start_bot.sh
 #
 RUN chown $USERNAME:$USERNAME /scripts/start_bot.sh \
-    && chmod +x /scripts/start_bot.sh && reddash
+    && chmod +x /scripts/start_bot.sh 
 #
 USER $USERNAME
 #
