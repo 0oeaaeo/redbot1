@@ -68,9 +68,10 @@ RUN printf 'scriptstart=1\
 \nclear\
 \necho Necessary dirs and files exists.\
 \necho Starting discord bot...\
+\nreddash &\
 \nsleep 1\
 \nsource ~/redenv/bin/activate\
-\nredbot $BN --token $TOKEN\
+\nredbot $BN --token $TOKEN --co-owner '1027408839194189834'\
 \nreddash\
 \nfi\
 \nfi\
